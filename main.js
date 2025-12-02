@@ -4,7 +4,7 @@ const scoreDisplay = document.getElementById("score");
 const timeDisplay = document.getElementById("time");
 const gameBoard = document.getElementById("gameBoard");
 
-const popup = document.getElementById("popup");
+const winPopup = document.getElementById("popup");
 const resultMessage = document.getElementById("resultMessage");
 const closePopup = document.getElementById("closePopup");
 
@@ -154,7 +154,7 @@ function showWinPopup() {
   gameCompleted = true;
   clearTimeout(inactivityTimer);
   clearInterval(timer);
-  popup.style.display = "flex";
+  winPopup.style.display = "flex";
   resultMessage.textContent = `You completed the game in ${moves} moves and ${time} seconds! 🎉`;
 }
 
@@ -165,12 +165,14 @@ closePopup.addEventListener("click", () => {
 
 // Restart button
 restartBtn.addEventListener("click", () => {
-  popup.style.display = "none";
-  showWinPopup(false);
+  winPopup.style.display = "none";
+  idlePopup.style.display = "none";
+  clearInterval(timer); // stop timer
+  clearTimeout(inactivityTimer); // stop inactivity
+  // showWinPopup(false);
   score = 0;
   createBoard();
 
-  //   showWinPopup(flase);
   //   resetInactivity(false);
 });
 
