@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f7f7f7;
+  /* background: linear-gradient(to right, #2a7b9b, #57c785, #e8d420); */
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  /* background: #fff; */
+  padding: 10px;
+  /* border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+  text-align: center;
+}
+
+h1 {
+  color: #0e9d57;
+  margin-bottom: 15px;
+}
+
+/* Restart Button */
+#restart {
+  padding: 10px 20px;
+  background: #1c0e9d;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+#restart:hover {
+  background: #1a02f1;
+}
+
+/* Game Info */
+.game-info {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #0e9d57;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin-left: 30px;
+  justify-content: center;
+}
+
+/* Card styles */
+.card {
+  width: 110px;
+  height: 110px;
+  background: rgb(166, 86, 166);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #9cd5e3;
+  font-size: 80px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.card.flipped {
+  background: #ecf0f1;
+}
+
+.card.matched {
+  background: #2ecc71;
+}
+
+/* Popup */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: white;
+  width: 350px;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.popup-content h2 {
+  color: #0e9d57;
+  margin-bottom: 10px;
+}
+
+.popup-content button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #1c0e9d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.popup-content button:hover {
+  background: #1a02f1;
+}
+
+@media (max-width: 500px) {
+  .game-board {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .card {
+    width: 70px;
+    height: 70px;
+  }
+}

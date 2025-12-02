@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Memory Game</h1>
+        <button id="restart">Restart</button>
+
+        <!-- Game info -->
+        <div class="game-info">
+            <p id="moves">Moves: 0</p>
+            <p id="score">Score: 0</p>
+            <p id="time">Time: 0</p>
+        </div>
+
+        <div class="game-board" id="gameBoard">
+        </div>
+        <!-- Popup Message -->
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <h2>Congratulations! 🎉</h2>
+                <p id="resultMessage"></p>
+
+                <button id="closePopup">Play Again</button>
+            </div>
+        </div>
+
+        <div id="idlePopup" class="popup">
+            <div class="popup-content">
+                <h2>Are you still there?</h2>
+                <p>You have been inactive for 10 seconds.</p>
+                <button id="resumeGame">Resume</button>
+                <button id="idleRestart">Restart</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
