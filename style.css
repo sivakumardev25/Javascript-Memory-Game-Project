@@ -8,10 +8,10 @@
 body {
   display: flex;
   justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #f7f7f7;
-  /* background: linear-gradient(to right, #2a7b9b, #57c785, #e8d420); */
+  /* align-items: center; */
+  /* min-height: 100vh; */
+  background: rgba(5, 12, 37, 0.8);
+ 
 }
 
 .container {
@@ -26,7 +26,8 @@ body {
 
 h1 {
   color: #0e9d57;
-  margin-bottom: 15px;
+  margin-top: 10px;
+  margin-bottom: 25px;
 }
 
 /* Restart Button */
@@ -37,7 +38,6 @@ h1 {
   color: white;
   border-radius: 6px;
   cursor: pointer;
-  font-size: 16px;
   margin-bottom: 20px;
 }
 
@@ -51,7 +51,7 @@ h1 {
   justify-content: space-around;
   margin-bottom: 20px;
   font-weight: bold;
-  color: #0e9d57;
+  font-size: 18px;
 }
 
 .game-board {
@@ -59,26 +59,29 @@ h1 {
   grid-template-columns: repeat(5, 1fr);
   gap: 10px;
   margin-left: 30px;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 /* Card styles */
 .card {
-  width: 110px;
+  width: 100%;
   height: 110px;
-  background: rgb(166, 86, 166);
+  background: #007bff;
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #9cd5e3;
+  /* color: #9cd5e3; */
   font-size: 80px;
   cursor: pointer;
-  transition: transform 0.3s;
+  user-select: none;
+  transition: transform 0.8s;
 }
 
 .card.flipped {
   background: #ecf0f1;
+  color: #007bff;
+  transform: rotateY(180deg);
 }
 
 .card.matched {
@@ -100,7 +103,7 @@ h1 {
 
 .popup-content {
   background: white;
-  width: 350px;
+  max-width: 350px;
   padding: 25px;
   border-radius: 10px;
   text-align: center;
@@ -115,7 +118,7 @@ h1 {
   margin-top: 15px;
   padding: 10px 20px;
   background: #1c0e9d;
-  color: white;
+  color: #fff;
   border: none;
   border-radius: 6px;
   cursor: pointer;
